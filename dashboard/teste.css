@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cores Personalizadas */
+:root {
+    --cor-primaria: #003886; /* Azul escuro */
+    --cor-secundaria: #ceecff; /* Azul claro */
+    --cor-texto: #333333; /* Preto */
+    --cor-borda: #CAE1F5; /* Azul bebê */
+}
+
+body {
+    font-family: 'Arimo', sans-serif;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#perfil .material-icons,
+#menu .material-icons {
+    font-size: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+#user_name h2 {
+    margin: 0;
+    color: var(--cor-primaria);
+}
+
+#barra_de_pesquisa {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+#barra_de_pesquisa input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#disciplinas h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.cartao_disciplina {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cartao_disciplina h4 {
+    margin-bottom: 10px; 
+}
+
+.informacoes_disciplina h5 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: var(--cor-primaria);
+}
+
+.informacoes_disciplina p {
+    margin: 0;
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Estilo dos Horários de Aula */
+.horario_aulas p {
+    margin: 0;
+    color: var(--cor-texto);
+    display: inline-flex;
+    font-family: 'Arimo', sans-serif; 
+    font-size: 12px; 
+    line-height: 1.6;
+}
+
+.horario_aulas .material-icons {
+    margin-right: 10px;
+    color: var(--cor-primaria);
+}
