@@ -6,7 +6,7 @@
 
 /* Cores Personalizadas */
 :root {
-    --cor-primaria: #003886; /* Azul escuro */
+    --cor-primaria: #0067CF; /* Azul escuro */
     --cor-secundaria: #ceecff; /* Azul claro */
     --cor-texto: #333333; /* Preto */
     --cor-borda: #CAE1F5; /* Azul bebê */
@@ -34,13 +34,24 @@ header {
     font-size: 24px;
 }
 
+.logo img {
+    width: 150px; 
+    height: 50px; 
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
 main {
     padding: 20px;
 }
 
+
 #user_name h2 {
     margin: 0;
     color: var(--cor-primaria);
+    line-height: 3.5;
 }
 
 #barra_de_pesquisa {
@@ -62,7 +73,15 @@ main {
     margin-bottom: 10px;
 }
 
+#mensagem h3 {
+    color: var(--cor-texto);
+    margin-bottom: 10px;
+}
+
 .cartao_disciplina {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
     background-color: #ffffff;
     padding: 20px;
     margin-bottom: 20px;
@@ -70,33 +89,56 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.cartao_disciplina h4 {
-    margin-bottom: 10px; 
+.cartao_disciplina img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
 }
 
-.informacoes_disciplina h5 {
+.cartao_disciplina .informacoes_disciplina {
+    flex: 1;
+}
+
+.cartao_disciplina h4 {
+    margin-bottom: 10px;
+}
+
+.cartao_disciplina .informacoes_disciplina h5 {
     margin-top: 10px;
     margin-bottom: 5px;
     color: var(--cor-primaria);
 }
 
-.informacoes_disciplina p {
+.cartao_disciplina .informacoes_disciplina p {
     margin: 0;
     color: var(--cor-texto);
     line-height: 1.6;
 }
 
-/* Estilo dos Horários de Aula */
 .horario_aulas p {
     margin: 0;
     color: var(--cor-texto);
     display: inline-flex;
-    font-family: 'Arimo', sans-serif; 
-    font-size: 12px; 
+    font-family: 'Arimo', sans-serif;
+    font-size: 12px;
     line-height: 1.6;
 }
 
 .horario_aulas .material-icons {
     margin-right: 10px;
     color: var(--cor-primaria);
+}
+
+.mais_informacoes {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.mais_informacoes:hover {
+    background-color: #0055a5;
 }
