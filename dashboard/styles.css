@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Cores Personalizadas */
 :root {
     --cor-primaria: #0067CF; /* Azul escuro */
     --cor-secundaria: #ceecff; /* Azul claro */
@@ -66,11 +65,7 @@ header {
     background-color: var(--cor-primaria);
 }
 
-#menu {
-    cursor: pointer;
-}
-
-#perfil {
+#menu, #perfil {
     cursor: pointer;
 }
 
@@ -98,6 +93,11 @@ main {
     line-height: 3.5;
 }
 
+#mensagem h3 {
+    color: var(--cor-texto);
+    margin-bottom: 10px;
+}
+
 #barra_de_pesquisa {
     margin-top: 20px; 
     margin-bottom: 20px; 
@@ -114,11 +114,6 @@ main {
 
 #disciplinas h3 {
     color: var(--cor-primaria);
-    margin-bottom: 10px;
-}
-
-#mensagem h3 {
-    color: var(--cor-texto);
     margin-bottom: 10px;
 }
 
@@ -187,6 +182,73 @@ main {
     background-color: #0055a5;
 }
 
+#eventos h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.cartao_eventos {
+    display: flex;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cartao_eventos img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.informacoes_evento {
+    flex: 1;
+}
+
+.informacoes_evento h2 {
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+}
+
+.informacoes_evento h4 {
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+}
+
+.informacoes_evento p {
+    margin: 10px 0;
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.inscricao {
+    padding: 10px 20px;
+    background-color: #83E506;
+    color: #333333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indisponivel {
+    padding: 10px 20px;
+    background-color: #FF0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.inscricao:hover {
+    background-color: #0055a5;
+}
+
 /* Estilos para o modal */
 .modal {
     display: none;
@@ -230,7 +292,7 @@ main {
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
-    display: none; /* Inicialmente escondido */
+    display: none; 
 }
 
 .cartao_informacoes .informacoes {
