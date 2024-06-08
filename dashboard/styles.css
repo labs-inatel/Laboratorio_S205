@@ -7,26 +7,53 @@
 :root {
     --cor-primaria: #0067CF; /* Azul escuro */
     --cor-secundaria: #ceecff; /* Azul claro */
-    --cor-texto: #333333; /* Preto */
+    --cor-texto: #333333; /* Cinza escuro */
     --cor-borda: #CAE1F5; /* Azul bebê */
+    --cor-transparente: rgba(0, 0, 0, 0.1); /* Transparente */
+    --cor-branco: #fff; /* Branco */
+    --cor-verde: #83E506; /* Verde lima */
+    --cor-vermelho: #FF0000; /* Vermelho */
+    --cor-cinza: #888; /* Cinza */
+    --cor-preto: rgb(0,0,0); /* Preto */
+    --cor-cinzalight: #ddd; /* cinza claro */
+
+    
+    --md-sys-color-primary: var(--cor-primaria); /* Azul escuro */
+    --md-sys-color-on-primary: var(--cor-branco); /* Branco (cor do texto sobre o fundo primário) */
+    --md-sys-color-primary-container: var(--cor-secundaria); /* Azul claro */
+    --md-sys-color-on-primary-container: var(--cor-texto); /* Cinza escuro (cor do texto sobre o fundo primário do container) */
+    --md-sys-color-background: var(--cor-branco); /* Branco (fundo principal) */
+    --md-sys-color-on-background: var(--cor-texto); /* Cinza escuro (cor do texto sobre o fundo principal) */
+    --md-sys-color-surface: var(--cor-branco); /* Branco (superfície) */
+    --md-sys-color-on-surface: var(--cor-texto); /* Cinza escuro (cor do texto sobre a superfície) */
+    --md-sys-color-error: var(--cor-vermelho); /* Vermelho (erro) */
+    --md-sys-color-on-error: var(--cor-branco); /* Branco (cor do texto sobre o erro) */
+    --md-sys-color-success: var(--cor-verde); /* Verde lima (sucesso) */
+    --md-sys-color-on-success: var(--cor-branco); /* Branco (cor do texto sobre o sucesso) */
+    --md-sys-color-disabled: var(--cor-cinza); /* Cinza (desativado) */
+    --md-sys-color-on-disabled: var(--cor-texto); /* Cinza escuro (cor do texto sobre desativado) */
+    --md-sys-color-border: var(--cor-borda); /* Azul bebê (borda) */
+    --md-sys-color-transparent: var(--cor-transparente); /* Transparente */
+    --md-sys-color-link: var(--cor-primaria); /* Azul escuro (link) */
+    --md-sys-color-on-link: var(--cor-primaria); /* Azul escuro (cor do texto sobre o link) */
 }
 
 body {
     font-family: 'Arimo', sans-serif;
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-background);
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--md-sys-color-transparent);
 }
 
 #sidebar, #profile-sidebar {
@@ -34,10 +61,10 @@ header {
     height: 100%;
     position: fixed;
     top: 0;
-    background-color: var(--cor-primaria);
-    color: #fff;
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
     transition: left 0.3s ease, right 0.3s ease;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 5px var(--md-sys-color-transparent);
     z-index: 1000;
 }
 
@@ -62,7 +89,7 @@ header {
 }
 
 #sidebar ul li:hover, #profile-sidebar ul li:hover {
-    background-color: var(--cor-primaria);
+    background-color: var(--md-sys-color-primary);
 }
 
 #menu, #perfil {
@@ -89,12 +116,12 @@ main {
 
 #user_name h2 {
     margin: 0;
-    color: var(--cor-primaria);
+    color: var(--md-sys-color-primary);
     line-height: 3.5;
 }
 
 #mensagem h3 {
-    color: var(--cor-texto);
+    color: var(--md-sys-color-on-primary-container);
     margin-bottom: 10px;
 }
 
@@ -107,13 +134,13 @@ main {
     width: 100%;
     height: 40px;
     padding: 10px;
-    border: 1px solid var(--cor-borda);
+    border: 1px solid var(--md-sys-color-border);
     border-radius: 5px;
     font-size: 16px;
 }
 
 #disciplinas h3 {
-    color: var(--cor-primaria);
+    color: var(--md-sys-color-primary);
     margin-bottom: 10px;
 }
 
@@ -121,11 +148,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    background-color: #ffffff;
+    background-color: var(--md-sys-color-background);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--md-sys-color-transparent);
 }
 
 .cartao_disciplina img {
@@ -145,18 +172,18 @@ main {
 .cartao_disciplina .informacoes_disciplina h5 {
     margin-top: 10px;
     margin-bottom: 5px;
-    color: var(--cor-primaria);
+    color: var(--md-sys-color-primary);
 }
 
 .cartao_disciplina .informacoes_disciplina p {
     margin: 0;
-    color: var(--cor-texto);
+    color: var(--md-sys-color-on-background);
     line-height: 1.6;
 }
 
 .horario_aulas p {
     margin: 0;
-    color: var(--cor-texto);
+    color: var(--md-sys-color-on-background);
     display: inline-flex;
     font-family: 'Arimo', sans-serif;
     font-size: 12px;
@@ -165,12 +192,12 @@ main {
 
 .horario_aulas .material-icons {
     margin-right: 10px;
-    color: var(--cor-primaria);
+    color: var(--md-sys-color-primary);
 }
 
 .mais_informacoes {
-    background-color: var(--cor-primaria);
-    color: white;
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -179,22 +206,22 @@ main {
 }
 
 .mais_informacoes:hover {
-    background-color: #0055a5;
+    background-color: var(--md-sys-color-on-primary);
 }
 
 #eventos h3 {
-    color: var(--cor-primaria);
+    color: var(--md-sys-color-primary);
     margin-bottom: 10px;
 }
 
 .cartao_eventos {
     display: flex;
     align-items: flex-start;
-    background-color: #ffffff;
+    background-color: var(--md-sys-color-background);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--md-sys-color-transparent);
 }
 
 .cartao_eventos img {
@@ -211,24 +238,24 @@ main {
 
 .informacoes_evento h2 {
     margin-bottom: 10px;
-    color: var(--cor-texto);
+    color: var(--md-sys-color-on-background);
 }
 
 .informacoes_evento h4 {
     margin-bottom: 10px;
-    color: var(--cor-texto);
+    color: var(--md-sys-color-on-background);
 }
 
 .informacoes_evento p {
     margin: 10px 0;
-    color: var(--cor-texto);
+    color: var(--md-sys-color-on-background);
     line-height: 1.6;
 }
 
 .inscricao {
     padding: 10px 20px;
-    background-color: #83E506;
-    color: #333333;
+    background-color: var(--md-sys-color-success);
+    color: var(--md-sys-color-on-success);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -237,8 +264,8 @@ main {
 
 .indisponivel {
     padding: 10px 20px;
-    background-color: #FF0000;
-    color: #ffffff;
+    background-color: var(--md-sys-color-error);
+    color: var(--md-sys-color-on-error);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -246,10 +273,13 @@ main {
 }
 
 .inscricao:hover {
-    background-color: #0055a5;
+    background-color: var(--md-sys-color-primary);
 }
 
-/* Estilos para o modal */
+.indisponivel:hover {
+    background-color: var(--md-sys-color-vermelho);
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -259,21 +289,21 @@ main {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--cor-transparente);
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: var(--cor-texto);
     margin: 10% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid var(--cor-cinza);
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
 }
 
 .close {
-    color: #aaa;
+    color: var(--cor-cinza);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -281,14 +311,14 @@ main {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: var(--cor-preto);
     text-decoration: none;
     cursor: pointer;
 }
 
 .cartao_informacoes {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-cinzalight);
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
@@ -307,3 +337,4 @@ main {
 .cartao_informacoes p {
     margin: 5px 0;
 }
+

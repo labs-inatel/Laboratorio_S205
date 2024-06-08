@@ -64,14 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
             infoCard.style.display = (infoCard.style.display === 'block') ? 'none' : 'block';
         });
     });
-
     
     inscricaoButton.forEach(button => {
         button.addEventListener('click', (event) => {
             infoCard.style.display = (infoCard.style.display === 'block') ? 'none' : 'block';
         });
     });
-
     
     indisponivelButton.forEach(button => {
         button.addEventListener('click', (event) => {
@@ -87,3 +85,5 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'telaMenu.html';
     });
 });
+
+
