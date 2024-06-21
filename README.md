@@ -4,7 +4,13 @@
 - Curso: Engenharia de Software.
 - Elaborado por: Iza Lopes.
 
-## Descrição
+## Sumário:
+
+1. [Descrição do projeto](#descrição-do-projeto)
+2. [Tecnologias utilizadas](#tecnologias-utilizadas)
+3. [Como executar](#como-executar)
+   
+## Descrição do projeto
  
 Este projeto visa melhorar a usabilidade das funcionalidades principais do aplicativo acadêmico do [INATEL](https://inatel.br/home/), tais como a apresentação das informações referentes a notas, frequência, horários e avisos para os alunos, além de implementar uma nova funcionalidade monetizável conforme as demandas dos usuários da instituição.
 
@@ -21,13 +27,13 @@ Este projeto visa melhorar a usabilidade das funcionalidades principais do aplic
   <img src="https://github.com/Izalp/Laboratorio_S205/assets/102091381/37f1c11d-78e8-4d95-a0a2-ea71dfe49f84" alt="Description of image 9">
 </details>
 
-## Tecnologias Utilizadas
+## Tecnologias utilizadas
  
 - **HTML**: Utilizada para estruturação do conteúdo das telas.
 - **CSS**:  Utilizada para estilização e aprimoramento visual dos elementos.
 - **Javascript**: Utilizada para adicionar interatividade e dinamismo à interface do usuário.
 
-## Instalação
+## Como executar
  
 1. Clone o repositório:
     ```bash
