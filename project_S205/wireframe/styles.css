@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #0067CF; /* Azul escuro */
+    --cor-secundaria: #ceecff; /* Azul claro */
+    --cor-texto: #333333; /* Cinza escuro */
+    --cor-borda: #CAE1F5; /* Azul bebê */
+    --cor-transparente: rgba(0, 0, 0, 0.1); /* Transparente */
+    --cor-branco: #fff; /* Branco */
+    --cor-verde: #83E506; /* Verde lima */
+    --cor-vermelho: #FF0000; /* Vermelho */
+    --cor-cinza: #888; /* Cinza */
+    --cor-preto: rgb(0,0,0); /* Preto */
+    --cor-cinzalight: #ddd; /* cinza claro */
+
+    
+    --md-sys-color-primary: var(--cor-primaria); /* Azul escuro */
+    --md-sys-color-on-primary: var(--cor-branco); /* Branco (cor do texto sobre o fundo primário) */
+    --md-sys-color-primary-container: var(--cor-secundaria); /* Azul claro */
+    --md-sys-color-on-primary-container: var(--cor-texto); /* Cinza escuro (cor do texto sobre o fundo primário do container) */
+    --md-sys-color-background: var(--cor-branco); /* Branco (fundo principal) */
+    --md-sys-color-on-background: var(--cor-texto); /* Cinza escuro (cor do texto sobre o fundo principal) */
+    --md-sys-color-surface: var(--cor-branco); /* Branco (superfície) */
+    --md-sys-color-on-surface: var(--cor-texto); /* Cinza escuro (cor do texto sobre a superfície) */
+    --md-sys-color-error: var(--cor-vermelho); /* Vermelho (erro) */
+    --md-sys-color-on-error: var(--cor-branco); /* Branco (cor do texto sobre o erro) */
+    --md-sys-color-success: var(--cor-verde); /* Verde lima (sucesso) */
+    --md-sys-color-on-success: var(--cor-branco); /* Branco (cor do texto sobre o sucesso) */
+    --md-sys-color-disabled: var(--cor-cinza); /* Cinza (desativado) */
+    --md-sys-color-on-disabled: var(--cor-texto); /* Cinza escuro (cor do texto sobre desativado) */
+    --md-sys-color-border: var(--cor-borda); /* Azul bebê (borda) */
+    --md-sys-color-transparent: var(--cor-transparente); /* Transparente */
+    --md-sys-color-link: var(--cor-primaria); /* Azul escuro (link) */
+    --md-sys-color-on-link: var(--cor-primaria); /* Azul escuro (cor do texto sobre o link) */
+}
+
+body {
+    font-family: 'Arimo', sans-serif;
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-background);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px var(--md-sys-color-transparent);
+}
+
+#sidebar, #profile-sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    transition: left 0.3s ease, right 0.3s ease;
+    box-shadow: 2px 0 5px var(--md-sys-color-transparent);
+    z-index: 1000;
+}
+
+#sidebar {
+    left: -250px;
+}
+
+#profile-sidebar {
+    right: -250px;
+    left: auto;
+}
+
+#sidebar ul, #profile-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li, #profile-sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+#sidebar ul li:hover, #profile-sidebar ul li:hover {
+    background-color: var(--md-sys-color-primary);
+}
+
+#menu, #perfil {
+    cursor: pointer;
+}
+
+#perfil .material-icons,
+#menu .material-icons {
+    font-size: 24px;
+}
+
+.logo img {
+    width: 150px; 
+    height: 50px; 
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+#user_name h2 {
+    margin: 0;
+    color: var(--md-sys-color-primary);
+    line-height: 3.5;
+}
+
+#mensagem h3 {
+    color: var(--md-sys-color-on-primary-container);
+    margin-bottom: 10px;
+}
+
+#barra_de_pesquisa {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+#barra_de_pesquisa input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid var(--md-sys-color-border);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#disciplinas h3 {
+    color: var(--md-sys-color-primary);
+    margin-bottom: 10px;
+}
+
+.cartao_disciplina {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between; 
+    background-color: var(--md-sys-color-background);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--md-sys-color-transparent);
+    text-align: left;
+}
+
+.cartao_disciplina img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.cartao_disciplina .informacoes_disciplina {
+    flex: 1;
+}
+
+.cartao_disciplina h4 {
+    margin-bottom: 10px;
+}
+
+.cartao_disciplina .informacoes_disciplina h5 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: var(--md-sys-color-primary);
+}
+
+.cartao_disciplina .informacoes_disciplina p {
+    margin: 0;
+    color: var(--md-sys-color-on-background);
+    line-height: 1.6;
+}
+
+.horario_aulas p {
+    margin: 0;
+    color: var(--md-sys-color-on-background);
+    display: inline-flex;
+    font-family: 'Arimo', sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.horario_aulas .material-icons {
+    margin-right: 10px;
+    color: var(--md-sys-color-primary);
+}
+
+.mais_informacoes {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.mais_informacoes:hover {
+    background-color: var(--md-sys-color-on-primary);
+}
+
+#eventos h3 {
+    color: var(--md-sys-color-primary);
+    margin-bottom: 10px;
+}
+
+.cartao_eventos {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: var(--md-sys-color-background);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--md-sys-color-transparent);
+    text-align: left;
+}
+
+.cartao_eventos img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.informacoes_evento {
+    flex: 1;
+}
+
+.informacoes_evento h2 {
+    margin-bottom: 10px;
+    color: var(--md-sys-color-on-background);
+}
+
+.informacoes_evento h4 {
+    margin-bottom: 10px;
+    color: var(--md-sys-color-on-background);
+}
+
+.informacoes_evento p {
+    margin: 10px 0;
+    color: var(--md-sys-color-on-background);
+    line-height: 1.6;
+}
+
+.inscricao {
+    padding: 10px 20px;
+    background-color: var(--md-sys-color-success);
+    color: var(--md-sys-color-on-success);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indisponivel {
+    padding: 10px 20px;
+    background-color: var(--md-sys-color-error);
+    color: var(--md-sys-color-on-error);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.inscricao:hover {
+    background-color: var(--md-sys-color-primary);
+}
+
+.indisponivel:hover {
+    background-color: var(--md-sys-color-vermelho);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--cor-transparente);
+}
+
+.modal-content {
+    background-color: var(--cor-texto);
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid var(--cor-cinza);
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: var(--cor-cinza);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--cor-preto);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cartao_informacoes {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-cinzalight);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    display: none; 
+}
+
+.cartao_informacoes .informacoes {
+    line-height: 1.6;
+}
+
+.cartao_informacoes h4 {
+    color: var(--cor-primaria);
+    margin-top: 10px;
+}
+
+.cartao_informacoes p {
+    margin: 5px 0;
+}
