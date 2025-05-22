@@ -1,4 +1,9 @@
 # Projeto Telas do App Inatel
+
+![HTML5](https://img.shields.io/badge/html5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+
 - Repositório para registro do projeto desenvolvido na disciplina de Interface Homem-máquina - S205.
 - Instituto Nacional de Telecomunicações - Inatel.
 - Curso: Engenharia de Software.
